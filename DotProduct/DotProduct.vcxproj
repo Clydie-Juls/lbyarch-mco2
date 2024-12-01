@@ -130,7 +130,12 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dotfunc.asm" />
+    <CustomBuild Include="dotfunc.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\nasm\nasm dotfunc.asm -f win64</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dotfunc.obj</Outputs>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
