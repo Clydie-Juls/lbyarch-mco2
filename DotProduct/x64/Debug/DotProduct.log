@@ -1,3 +1,3 @@
-﻿  Performing Custom Build Tools
-  dotfunc.asm:19: error: symbol `sdot' not defined
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(247,5): error MSB8066: Custom build for 'dotfunc.asm' exited with code 1.
+﻿  main.c
+C:\Users\Clyde\OneDrive - De La Salle University - Manila\Documents\the-code\lbyarch\MP\DotProduct\DotProduct\main.c(103,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DotProduct.vcxproj -> C:\Users\Clyde\OneDrive - De La Salle University - Manila\Documents\the-code\lbyarch\MP\DotProduct\x64\Debug\DotProduct.exe
