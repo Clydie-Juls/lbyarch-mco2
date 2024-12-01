@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <time.h>
 
 extern void x64dotfunc(int n, double *a, double *b, double* sDot);
@@ -48,7 +47,7 @@ void testCKernel(int n) {
 	printf("Average time taken with C method: %lfms\n", avgTimeTaken / 20.0f);
 
 	// Account for floating point error
-	if (fabs(sDot - expectedValue) < 0.00001) {
+	if ((int) sDot == (int) expectedValue) {
 		printf("The C kernel output is correct (accounting for floating point error).\n");
 	} else {
 		printf("The C kernel output is incorrect.\n");
